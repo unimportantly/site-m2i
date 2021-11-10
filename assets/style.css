@@ -75,7 +75,7 @@ body {
 .content {
     position: relative;
     overflow: hidden;
-    width: 100vw;
+    width: 98.9vw;
     background-color: aqua;
 }
 
@@ -500,7 +500,7 @@ ul.nav {
 .poe h4 {
     color: #222;
     font-size: 1.3em;
-    font-weight: 1.3;
+    font-weight: bold;
 }
 
 .poe p {
@@ -563,4 +563,137 @@ ul.nav {
     color: #606060;
     line-height: 1.6em;
     font-size: 1.2em;
+}
+
+/* news style */ 
+
+.news {
+    background-color: #f8f8f8fa;
+    display: flex;
+    height: 600px;
+    justify-content: space-between;
+}
+
+.news1 a, .news2 a, .news3 a{
+    height: 600px; 
+    width: 465px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #FFF;
+    text-decoration: none;
+}
+
+.news img {
+    max-width: 425px;
+    max-height: 315px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.news h5 {
+    color: #F83131;
+    font-weight: bold;
+    padding-left: 25px;
+    margin-top: 30px;
+}
+
+.news h4 {
+    color: #222;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 15px;
+    padding-bottom: 50px;
+}
+
+.news p {
+    color: #606060;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+/* map style */
+
+.carte img {
+    width: 98.9vw;
+}
+
+/* contact style */
+
+.contacteznous {
+    height: 550px;
+}
+
+.background {
+    opacity: 0.85;
+}
+
+.background > img {
+    height: 550px;
+    position: absolute;
+    z-index: 1;
+    margin: -3px;
+}
+
+.contacteznous > .contact {
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contacteznous  p {
+    position: relative;
+    z-index: 5;
+    font-size: 2.6em;
+    padding: 50px;
+    width: 700px;
+    color: #f8f8f8fa;
+    font-weight: bold;
+}
+
+.contactbutton {
+    position: relative;
+    z-index: 5;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: #F83131;
+    padding: 15px;
+    max-width: 240px;
+    margin-top: 15px;
+}
+
+.contactbutton a:link {
+    text-decoration: none;
+    color:#FFF;
+}
+
+.contacteznous > .gradient {
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    background: linear-gradient(
+        113deg, rgba(255,0,0,0.7) 0%,rgba(0,5,120,0.7) 70%);
+    margin: -3px;
+}
+
+/* clients style */
+
+.clients {
+    height: 450px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clientlist {
+    display: flex;
+
+}
+
+.clientlist img {
+    height: 10%;
+    width: 10%;
 }
