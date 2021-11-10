@@ -22,6 +22,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    color:inherit;
+    text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -60,49 +62,121 @@ body {
 
 
 /* header style */
+header {
+    color: #FFF;
+    height: 70vh;
+    width: 100vw;
+}
 
-.video {
+.video > video{
     position : absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    width: 100vw;
 }
 
 .header {
-    z-index: 5;
+    z-index: 7;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
 }
 
+.bienvenue {
+    font-size: 1.5em;
+}
+
+.trouvez {
+    font-size: 3em;
+    font-weight: bold;
+    padding:1%;
+}
+
+.examples {
+    font-size: 0.6em;
+    padding-right: 35%;
+    padding-top: 1%;
+}
 .content {
     position: relative;
     overflow: hidden;
     width: 98.9vw;
-    background-color: aqua;
 }
 
 .wrapper {
-    z-index: 5;
+    z-index: 7;
     position: relative;
 }
 
 .menu {
     display: flex;
-    align-content: space-between;
+    padding: 1%;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .logo {
     display : flex;
     align-items: center;
 }
 
+.search > form > input{
+    width: 47vw;
+    height: 10vh;
+    background: inherit;
+    border: 2px solid white;
+    border-radius: 36px;
+}
+
 ul.nav {
     position: relative;
     display: flex;
+    justify-content: right;
 }
 
+ul.nav > li {
+    padding:1%;
+}
+.avis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    margin: 1%;
+    line-height: 1.2em;
+}
+
+.avis > ul > li:first-child {
+    display: flex;
+    justify-content: center;
+}
+
+.avis > ul > li:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.avis img {
+    width: 20%;
+}
+
+.gradient{
+    position: absolute;
+    width: 100vw;
+    height:71vh;
+    background: linear-gradient(
+        113deg, rgba(255,0,0,0.7) 0%,rgba(0,5,120,0.7) 50%);
+    z-index: 6;
+}
 
 /* formation style */
 .formation {
     background-color: #f8f8f8fa;
-    height: 400px;
+    height: 70vh;
 }
 
 .formationtext {
@@ -117,6 +191,7 @@ ul.nav {
     max-width: 700px;
     margin-left: auto;
     margin-right:auto;    
+    padding-top: 8%;
 }
 
 .formationlist > ul {
@@ -140,8 +215,8 @@ ul.nav {
     padding: 10px;
 }
 .formationlist > ul > li > a > img {
-    max-width: 260px;
-    max-height: 260px;
+    max-width: 18vw;
+    max-height: 39vh;
 }
 
 /* financement style */
@@ -170,18 +245,22 @@ ul.nav {
 }
 
 .financementlist > ul > li {
-    padding: 10px;
-    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1%;
+    margin: 1%;
     background-color: #FFF;
 }
 
-.financementlist > ul > li > a{
-    display: flex;
-    flex-direction: column;
-}
+
 .financementlist > ul > li > a:link {
     color: #222;
     text-decoration: none;
+}
+
+.financementlist > ul > li > a:hover {
+    background-color: #f8f8f8b9;
 }
 
 .financementlist > ul > li > a > h5 {
@@ -194,16 +273,13 @@ ul.nav {
 .financementlist > ul > li > a > h6 {
     font-size: 100%;
     font-weight: 700;
-    max-width: 220px;
+    max-width: 12vw;
     padding-bottom: 20px;
 }
 
 .financementlist > ul > li > a > img {
-    display: flex;
-    justify-self: flex-end;
-    align-self: center;
-    max-width: 220px;
-    max-height: 260px;
+    max-width: 17vw;
+    max-height: 34vh;
 }
 
 /* transformation style */
@@ -213,12 +289,12 @@ ul.nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: #f8f8f8fa;
-    height : 500px;
+    height : 100vh;
 }
 
 .transformation > img {
-    max-height: 450px;
-    max-width: 450px;
+    max-height: 70vh;
+    max-width: 45vw;
    /* padding: 60px;*/
 }
 
@@ -249,6 +325,11 @@ ul.nav {
 .transformationdigitale > ul > li > a:link {
     text-decoration: none;
     color: #222;
+}
+
+.transformationdigitale > ul > li > a:hover {
+    text-decoration: none;
+    color:#050c41;
 }
 
 .transformationdigitale > ul > li > a {
@@ -284,6 +365,10 @@ ul.nav {
     padding-left: 5px;
 }
 
+.savoirplus:hover {
+    background-color: #050c41;
+}
+
 /* deploiements style */
 
 .deploiements {
@@ -291,12 +376,12 @@ ul.nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: #f8f8f8fa;
-    height : 500px;
+    height : 100vh;
 }
 
 .deploiements > img {
-    max-height: 450px;
-    max-width: 450px;
+    max-height: 70vh;
+    max-width: 45vw;
    /* padding: 60px;*/
 }
 
@@ -329,6 +414,11 @@ ul.nav {
     color: #222;
 }
 
+.deploiementsstrategiques > ul > li > a:hover {
+    text-decoration: none;
+    color:#050c41;
+}
+
 .deploiementsstrategiques > ul > li > a {
     font-size: 0.6em;
     margin: 5px 0.3em 5px 0;
@@ -351,12 +441,12 @@ ul.nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: #f8f8f8fa;
-    height : 500px;
+    height : 100vh;
 }
 
 .bulle > img {
-    max-height: 450px;
-    max-width: 450px;
+    max-height: 70vh;
+    max-width: 45vw;
    /* padding: 60px;*/
 }
 
@@ -389,6 +479,10 @@ ul.nav {
     color: #222;
 }
 
+.bulleinnovation > ul > li > a:hover {
+    text-decoration: none;
+    color:#050c41;
+}
 .bulleinnovation > ul > li > a {
     font-size: 0.6em;
     margin: 5px 0.3em 5px 0;
@@ -411,12 +505,12 @@ ul.nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: #f8f8f8fa;
-    height : 500px;
+    height : 100vh;
 }
 
 .cyber > img {
-    max-height: 450px;
-    max-width: 450px;
+    max-height: 70vh;
+    max-width: 45vw;
    /* padding: 60px;*/
 }
 
@@ -449,6 +543,11 @@ ul.nav {
     color: #222;
 }
 
+.cybersecurite > ul > li > a:hover {
+    text-decoration: none;
+    color:#050c41;
+}
+
 .cybersecurite > ul > li > a {
     font-size: 0.6em;
     margin: 5px 0.3em 5px 0;
@@ -469,13 +568,13 @@ ul.nav {
 .poe {
     background-color: #f8f8f8fa;
     display: flex;
-    height: 600px;
+    height: 80vh;
 }
 
 .poe1 a, .poe2 a{
     padding: 35px;
-    height: 600px; 
-    width: 570px;
+    height: 80vh;
+    width: 37vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -485,9 +584,13 @@ ul.nav {
     margin-left: 35px;
 }
 
+.poe a:hover {
+    background-color: #f8f8f8b9;
+}
+
 .poe img {
-    max-width: 570px;
-    max-height: 315px;
+    max-width: 38vw;
+    max-height: 79vh;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -513,7 +616,12 @@ ul.nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 91px;
+    width: 7vw;
+    height: 90vh;
+}
+
+.plus:hover {
+    background-color: #050c41;
 }
 
 .plus > a > img {
@@ -584,6 +692,9 @@ ul.nav {
     text-decoration: none;
 }
 
+.news a:hover {
+    background-color:#f8f8f8b9;
+}
 .news img {
     max-width: 425px;
     max-height: 315px;
@@ -622,7 +733,7 @@ ul.nav {
 /* contact style */
 
 .contacteznous {
-    height: 550px;
+    height: 80vh;
 }
 
 .background {
@@ -630,14 +741,14 @@ ul.nav {
 }
 
 .background > img {
-    height: 550px;
+    height: 80vh;
     position: absolute;
     z-index: 1;
     margin: -3px;
 }
 
 .contacteznous > .contact {
-    height: 550px;
+    height: 80vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -645,22 +756,22 @@ ul.nav {
 
 .contacteznous  p {
     position: relative;
-    z-index: 5;
+    z-index: 7;
     font-size: 2.6em;
     padding: 50px;
-    width: 700px;
-    color: #f8f8f8fa;
+    width: 45vw;
+    color: #FFF;
     font-weight: bold;
 }
 
 .contactbutton {
     position: relative;
-    z-index: 5;
+    z-index: 7;
     border: 1px solid rgba(0, 0, 0, 0);
     background-color: #F83131;
-    padding: 15px;
-    max-width: 240px;
-    margin-top: 15px;
+    padding: 1%;
+    max-width: 10%;
+    margin-top: 1%;
 }
 
 .contactbutton a:link {
@@ -668,10 +779,14 @@ ul.nav {
     color:#FFF;
 }
 
+.contactbutton:hover {
+    background-color: #050c41;
+}
+
 .contacteznous > .gradient {
     position: absolute;
     width: 100%;
-    height: 550px;
+    height: 80vh;
     background: linear-gradient(
         113deg, rgba(255,0,0,0.7) 0%,rgba(0,5,120,0.7) 70%);
     margin: -3px;
@@ -680,7 +795,7 @@ ul.nav {
 /* clients style */
 
 .clients {
-    height: 450px;
+    height: 70vh;
     background-color: #FFF;
     display: flex;
     flex-direction: column;
@@ -710,4 +825,46 @@ footer {
     background-color: #050c41;
     display: flex;
     justify-content: space-evenly;
+    font-size: 0.6em;
+    color: white;
+    padding-top: 2%;
+    line-height: 1.6em;
+}
+
+footer a:link a:visited{
+    text-decoration: none;
+    color: #FFF;
+}
+
+footer a:hover {
+    font-weight: bold;
+}
+
+footer h6 {
+    font-size: 1.7em;
+}
+
+footer .left {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+    width: 20%;
+}
+
+footer .left img {
+    width: 40%;
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .social {
+    display: flex;
+    flex-direction: row;
+}
+
+footer p {
+    width: 66%;
 }
