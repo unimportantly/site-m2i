@@ -688,12 +688,26 @@ ul.nav {
     align-items: center;
 }
 
+.clients > h3 {
+    font-size: 1.4em;
+    font-weight: 1000;
+    padding: 20px;  
+}
+
 .clientlist {
     display: flex;
-
+    align-items: center;
 }
 
 .clientlist img {
-    height: 10%;
-    width: 10%;
+    height: 25%;
+    width: 75%;
+}
+
+/* footer */
+
+footer {
+    background-color: #050c41;
+    display: flex;
+    justify-content: space-evenly;
 }
